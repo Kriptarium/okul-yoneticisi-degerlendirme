@@ -5,5 +5,19 @@
     "secenekler": ["Hiyerarşik karar alma", "Katı prosedürler", "Adaptif düşünme", "Risk almaktan kaçınma"],
     "dogru_cevap": "Adaptif düşünme",
     "geribildirim": "Çevik liderler, değişen koşullara hızla uyum sağlar ve ekiplerini esnek kararlarla yönlendirir."
+  },
+  {
+    "id": 2,
+    "soru": "Bir kriz anında okul yöneticisinin ilk yapması gereken nedir?",
+    "secenekler": ["Personeli suçlamak", "Durumu görmezden gelmek", "İletişim planını devreye almak", "Rutin işleri sürdürmek"],
+    "dogru_cevap": "İletişim planını devreye almak",
+    "geribildirim": "Kriz anlarında şeffaf ve hızlı iletişim, güveni sağlar ve kaosu azaltır."
+  },
+  {
+    "id": 3,
+    "soru": "Çevik liderlik ve afet yönetimi arasındaki ilişki aşağıdakilerden hangisidir?",
+    "secenekler": ["Birbirini dışlayan kavramlardır", "Çevik liderlik afet anında kullanılmaz", "Çevik liderlik krizlere uyumda etkilidir", "Afet yönetimi çevikliği engeller"],
+    "dogru_cevap": "Çevik liderlik krizlere uyumda etkilidir",
+    "geribildirim": "Afet ve kriz durumlarında çevik liderler, hızlı karar alma ve ekip yönlendirmede öne çıkar."
   }
 ]
