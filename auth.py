@@ -15,7 +15,7 @@ def kullanici_kaydet(kullanici_adi, sifre):
         kullanicilar = {}
 
     if kullanici_adi in kullanicilar:
-        return False  # zaten kayıtlı
+        return False
 
     kullanicilar[kullanici_adi] = sifre_hashle(sifre)
 
