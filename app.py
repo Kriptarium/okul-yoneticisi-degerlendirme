@@ -4,6 +4,32 @@ import os
 from datetime import datetime
 from auth import kullanici_kaydet, giris_yap
 
+# Kullanıcı ilerlemesi dosyası
+def ilerleme_kaydet(kullanici, konu_id):
+    dosya = "ilerleme.json"
+    if os.path.exists(dosya):
+        with open(dosya, "r", encoding="utf-8") as f:
+            veriler = json.load(f)
+    else:
+        veriler = {}
+
+    if kullanici not in veriler:
+        veriler[kullanici] = []
+
+    if konu_id not in veriler[kullanici]:
+        veriler[kullanici].append(konu_id)
+
+    with open(dosya, "w", encoding="utf-8") as f:
+        json.dump(veriler, f, ensure_ascii=False, indent=2)
+
+def ilerleme_al(kullanici):
+    dosya = "ilerleme.json"
+    if os.path.exists(dosya):
+        with open(dosya, "r", encoding="utf-8") as f:
+            veriler = json.load(f)
+            return veriler.get(kullanici, [])
+    return []
+
 st.set_page_config(page_title="Okul Yöneticisi Eğitimi", layout="centered")
 
 # Oturum değişkenlerini tanımla
@@ -55,17 +81,25 @@ if st.session_state["oturum"]:
     with open("konular.json", "r", encoding="utf-8") as f:
         konular = json.load(f)
 
-    st.markdown("## 📚 Eğitim Modülleri")
+    st.sidebar.markdown("## 📚 Eğitim Modülleri")
+    kullanici_ilerleme = ilerleme_al(st.session_state["kullanici"])
+    for k in konular:
+        if k["id"] in kullanici_ilerleme:
+            k["baslik"] += " ✅"
+    konu_basliklari = [k["baslik"] for k in konular]
+    secilen_konu = st.sidebar.selectbox("Eğitim modülünü seçin", konu_basliklari)
 
-    for konu in konular:
-        with st.expander(f"🎓 {konu['baslik']}"):
-            st.video(konu["video_url"])
-            st.info(konu["aciklama"])
-            if st.button(f"✅ Bu eğitimi tamamladım – {konu['baslik']}", key=konu["id"]):
-                st.session_state["konu_id"] = konu["id"]
-                st.session_state["konu_baslik"] = konu["baslik"]
-                st.session_state["teste_basla"] = True
-                st.rerun()
+    secili_konu = next((k for k in konular if k["baslik"] == secilen_konu), None)
+    if secili_konu:
+        st.header(f"🎓 {secili_konu['baslik']}")
+        st.video(secili_konu["video_url"])
+        st.info(secili_konu["aciklama"])
+        if st.button("✅ Bu eğitimi tamamladım"):
+            st.session_state["konu_id"] = secili_konu["id"]
+            st.session_state["konu_baslik"] = secili_konu["baslik"]
+            ilerleme_kaydet(st.session_state["kullanici"], secili_konu["id"])
+            st.session_state["teste_basla"] = True
+            st.rerun()
 
     if st.session_state.get("teste_basla", False):
         with open("sorular.json", "r", encoding="utf-8") as f:
