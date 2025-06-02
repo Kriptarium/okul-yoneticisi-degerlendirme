@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "soru": "Çevik liderlikte aşağıdakilerden hangisi temel bir ilkedir?",
+    "secenekler": ["Hiyerarşik karar alma", "Katı prosedürler", "Adaptif düşünme", "Risk almaktan kaçınma"],
+    "dogru_cevap": "Adaptif düşünme",
+    "geribildirim": "Çevik liderler, değişen koşullara hızla uyum sağlar ve ekiplerini esnek kararlarla yönlendirir."
+  }
+]
