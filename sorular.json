@@ -73,5 +73,80 @@
     ],
     "dogru_cevap": "Çevik liderliğin adaptasyon yetisi",
     "geribildirim": "Çevik liderler beklenmedik durumlara hızlıca yanıt verebilir, planları koşullara göre değiştirir."
+  },
+  {
+    "id": 201,
+    "konu_id": "kriz-iletisim",
+    "zorluk": "orta",
+    "kategori": "iletişim",
+    "soru": "Okulda yaşanan küçük bir yangın sonrasında yöneticiler, olayla ilgili bilgi vermek yerine öğrencilerden olayı başkalarına anlatmamalarını istiyor. Bu tutumun potansiyel etkisi nedir?",
+    "secenekler": [
+      "Toplulukta güven ve saygı artar.",
+      "Dedikodular ve bilgi kirliliği yayılır.",
+      "Krizin etkisi azalır.",
+      "İletişim kanalları etkin biçimde kullanılmış olur."
+    ],
+    "dogru_cevap": "Dedikodular ve bilgi kirliliği yayılır.",
+    "geribildirim": "Krizlerde bilgilendirme yapılmazsa söylentiler artar. Güven kaybı yaşanabilir."
+  },
+  {
+    "id": 202,
+    "konu_id": "kriz-iletisim",
+    "zorluk": "kolay",
+    "kategori": "planlama",
+    "soru": "Kriz anında okul yöneticisinin en doğru ilk adımı aşağıdakilerden hangisidir?",
+    "secenekler": [
+      "Suçlu aramak",
+      "Durumu gizlemek",
+      "İletişim planını devreye almak",
+      "Velileri en son bilgilendirmek"
+    ],
+    "dogru_cevap": "İletişim planını devreye almak",
+    "geribildirim": "Hazırlıklı bir yönetici, kriz planlarını hemen devreye alır ve bilgi akışını şeffaf şekilde yürütür."
+  },
+  {
+    "id": 203,
+    "konu_id": "kriz-iletisim",
+    "zorluk": "zor",
+    "kategori": "liderlik",
+    "soru": "Deprem sonrası okul binasında hasar tespit edilir. Müdür, öğrencilerle birlikte velilere de süreci düzenli bültenlerle anlatır. Bu iletişim stratejisinin temel faydası nedir?",
+    "secenekler": [
+      "Güven inşa eder ve panik ortamını azaltır.",
+      "Öğrencilerin sorumluluğu artar.",
+      "Okul yönetimi sorumluluktan kurtulur.",
+      "Bülten yerine sosyal medya kullanılmalıydı."
+    ],
+    "dogru_cevap": "Güven inşa eder ve panik ortamını azaltır.",
+    "geribildirim": "Kriz iletişiminde açıklık ve düzenli bilgilendirme güveni artırır, söylenti ortamını önler."
+  },
+  {
+    "id": 204,
+    "konu_id": "kriz-iletisim",
+    "zorluk": "orta",
+    "kategori": "iletişim",
+    "soru": "Bir servis kazası sonrası okul müdürü yalnızca öğrenci velileriyle değil, tüm okul topluluğuyla empatik bir dille açıklama yapar. Bu davranış hangi liderlik özelliğini yansıtır?",
+    "secenekler": [
+      "Yükümlülükten kaçınma",
+      "Empatik iletişim ve kapsayıcılık",
+      "Yönetimsel soğukkanlılık",
+      "Kuralların ötesine geçme"
+    ],
+    "dogru_cevap": "Empatik iletişim ve kapsayıcılık",
+    "geribildirim": "Krizde empati ile yapılan iletişim, sadece bilgi vermek değil aynı zamanda duygusal destek sağlamaktır."
+  },
+  {
+    "id": 205,
+    "konu_id": "kriz-iletisim",
+    "zorluk": "orta",
+    "kategori": "planlama",
+    "soru": "Okul yöneticisi, kriz başlamadan önce iletişim senaryoları hazırlamış ve kimin ne söyleyeceğini belirlemiştir. Bu hangi hazırlık düzeyine işaret eder?",
+    "secenekler": [
+      "Reaktif yönetim",
+      "Yetersiz planlama",
+      "Stratejik kriz öncesi iletişim planlaması",
+      "Otomatik cevaplama"
+    ],
+    "dogru_cevap": "Stratejik kriz öncesi iletişim planlaması",
+    "geribildirim": "Kriz öncesi iletişim planı oluşturmak, olay anında karar vermeyi kolaylaştırır ve paniği azaltır."
   }
 ]
