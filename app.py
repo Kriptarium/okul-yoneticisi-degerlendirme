@@ -6,9 +6,17 @@ from auth import kullanici_kaydet, giris_yap
 
 st.set_page_config(page_title="Okul Yöneticisi Eğitimi", layout="centered")
 
+# Oturum değişkenlerini tanımla
 if "oturum" not in st.session_state:
     st.session_state["oturum"] = False
+if "kullanici" not in st.session_state:
     st.session_state["kullanici"] = ""
+if "teste_basla" not in st.session_state:
+    st.session_state["teste_basla"] = False
+if "konu_id" not in st.session_state:
+    st.session_state["konu_id"] = None
+if "konu_baslik" not in st.session_state:
+    st.session_state["konu_baslik"] = None
 
 st.title("📘 Okul Yöneticileri İçin Eğitim ve Değerlendirme Platformu")
 
@@ -24,14 +32,14 @@ if menu == "Giriş Yap":
             st.session_state["kullanici"] = kullanici
             st.experimental_rerun()
         else:
-            st.error("Giriş bilgileri hatalı.")
+            st.error("Giriş bilgileri hatalı veya kullanıcı bulunamadı.")
 
 elif menu == "Kayıt Ol":
     yeni_kullanici = st.text_input("Yeni Kullanıcı Adı")
     yeni_sifre = st.text_input("Yeni Şifre", type="password")
     if st.button("Kaydol"):
         if kullanici_kaydet(yeni_kullanici, yeni_sifre):
-            st.success("Kayıt başarılı.")
+            st.success("Kayıt başarılı. Giriş yapabilirsiniz.")
         else:
             st.warning("Bu kullanıcı adı zaten kayıtlı.")
 
