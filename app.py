@@ -26,22 +26,28 @@ if menu == "Giriş Yap":
     kullanici = st.text_input("Kullanıcı Adı")
     sifre = st.text_input("Şifre", type="password")
     if st.button("Giriş"):
-        if giris_yap(kullanici, sifre):
-            st.success("Giriş başarılı!")
-            st.session_state["oturum"] = True
-            st.session_state["kullanici"] = kullanici
-            st.experimental_rerun()
+        if kullanici and sifre:
+            if giris_yap(kullanici, sifre):
+                st.success("Giriş başarılı!")
+                st.session_state["oturum"] = True
+                st.session_state["kullanici"] = kullanici
+                st.experimental_rerun()
+            else:
+                st.error("Giriş bilgileri hatalı veya kullanıcı bulunamadı.")
         else:
-            st.error("Giriş bilgileri hatalı veya kullanıcı bulunamadı.")
+            st.warning("Lütfen kullanıcı adı ve şifre giriniz.")
 
 elif menu == "Kayıt Ol":
     yeni_kullanici = st.text_input("Yeni Kullanıcı Adı")
     yeni_sifre = st.text_input("Yeni Şifre", type="password")
     if st.button("Kaydol"):
-        if kullanici_kaydet(yeni_kullanici, yeni_sifre):
-            st.success("Kayıt başarılı. Giriş yapabilirsiniz.")
+        if yeni_kullanici and yeni_sifre:
+            if kullanici_kaydet(yeni_kullanici, yeni_sifre):
+                st.success("Kayıt başarılı. Giriş yapabilirsiniz.")
+            else:
+                st.warning("Bu kullanıcı adı zaten kayıtlı.")
         else:
-            st.warning("Bu kullanıcı adı zaten kayıtlı.")
+            st.warning("Lütfen kullanıcı adı ve şifre giriniz.")
 
 if st.session_state["oturum"]:
     st.success(f"👋 Hoş geldiniz, {st.session_state['kullanici']}")
