@@ -31,7 +31,7 @@ if menu == "Giriş Yap":
                 st.success("Giriş başarılı!")
                 st.session_state["oturum"] = True
                 st.session_state["kullanici"] = kullanici
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("Giriş bilgileri hatalı veya kullanıcı bulunamadı.")
         else:
@@ -65,7 +65,7 @@ if st.session_state["oturum"]:
                 st.session_state["konu_id"] = konu["id"]
                 st.session_state["konu_baslik"] = konu["baslik"]
                 st.session_state["teste_basla"] = True
-                st.experimental_rerun()
+                st.rerun()
 
     if st.session_state.get("teste_basla", False):
         with open("sorular.json", "r", encoding="utf-8") as f:
