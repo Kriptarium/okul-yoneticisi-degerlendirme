@@ -1,18 +1,77 @@
 [
   {
-    "id": 1,
+    "id": 101,
     "konu_id": "cevik-liderlik",
-    "soru": "Çevik liderlikte aşağıdakilerden hangisi temel bir ilkedir?",
-    "secenekler": ["Hiyerarşik karar alma", "Katı prosedürler", "Adaptif düşünme", "Risk almaktan kaçınma"],
-    "dogru_cevap": "Adaptif düşünme",
-    "geribildirim": "Çevik liderler, değişen koşullara hızla uyum sağlar."
+    "zorluk": "orta",
+    "kategori": "liderlik",
+    "soru": "Okul müdürü, öğretmenlerin uzaktan eğitim süreciyle ilgili şikâyetlerini dikkate alarak canlı ders saatlerinde esnekliğe gitmiştir. Bu durum aşağıdakilerden hangisinin bir örneğidir?",
+    "secenekler": [
+      "Katı planlama yaklaşımı",
+      "Çevik liderlik uygulaması",
+      "Disiplinsizlik örneği",
+      "Hiyerarşik yönetime karşı gelme"
+    ],
+    "dogru_cevap": "Çevik liderlik uygulaması",
+    "geribildirim": "Çevik liderlik; geri bildirim alma, uyarlama ve esneklik temellidir. Müdürün uygulaması buna uygundur."
   },
   {
-    "id": 2,
-    "konu_id": "kriz-iletisim",
-    "soru": "Bir kriz anında okul yöneticisinin ilk yapması gereken nedir?",
-    "secenekler": ["Personeli suçlamak", "Durumu görmezden gelmek", "İletişim planını devreye almak", "Rutin işleri sürdürmek"],
-    "dogru_cevap": "İletişim planını devreye almak",
-    "geribildirim": "Kriz anlarında hızlı ve şeffaf iletişim, güveni sağlar ve kaosu azaltır."
+    "id": 102,
+    "konu_id": "cevik-liderlik",
+    "zorluk": "kolay",
+    "kategori": "liderlik",
+    "soru": "Aşağıdakilerden hangisi çevik liderlerin en çok önemsediği becerilerden biridir?",
+    "secenekler": [
+      "Sert ve değişmez yönetmelikleri uygulama",
+      "Hızlı karar alma ve değişen koşullara uyum sağlama",
+      "Yetkileri devretmeden süreci yönetme",
+      "Uzun vadeli sabit planlara bağlı kalma"
+    ],
+    "dogru_cevap": "Hızlı karar alma ve değişen koşullara uyum sağlama",
+    "geribildirim": "Çevik liderlik değişken ortamları yönetebilme, hızlı ve etkili uyum becerisi ile tanımlanır."
+  },
+  {
+    "id": 103,
+    "konu_id": "cevik-liderlik",
+    "zorluk": "zor",
+    "kategori": "karar alma",
+    "soru": "Bir okul yöneticisi, yeni bir dijital araç uygulanmadan önce öğretmenlerden kısa bir pilot uygulama yapmalarını ister. Süreç sonunda tüm öğretmenlerin görüşlerini alarak araçta değişiklik yapar. Bu yönetim yaklaşımı aşağıdakilerden hangisiyle en iyi tanımlanır?",
+    "secenekler": [
+      "Emir-komuta zinciri",
+      "Sabit strateji uygulaması",
+      "Toplu karar alma",
+      "Deneyim odaklı çevik dönüşüm"
+    ],
+    "dogru_cevap": "Deneyim odaklı çevik dönüşüm",
+    "geribildirim": "Çevik dönüşüm, geri bildirimlere göre tekrar eden iyileştirme döngüleri içerir. Bu süreç tam olarak çevik yaklaşıma karşılık gelir."
+  },
+  {
+    "id": 104,
+    "konu_id": "cevik-liderlik",
+    "zorluk": "orta",
+    "kategori": "iletişim",
+    "soru": "Okul müdürü öğretmenlerle her hafta kısa toplantılar yaparak açık uçlu bir soruyla herkesin fikrini alır. Sonrasında bu geri bildirimleri okul politikalarına entegre etmeye çalışır. Bu yaklaşım çevik liderlikte hangi unsuru temsil eder?",
+    "secenekler": [
+      "Güç merkezli otorite",
+      "Geri bildirim döngüsü",
+      "Tek yönlü yönetim",
+      "İzole karar alma"
+    ],
+    "dogru_cevap": "Geri bildirim döngüsü",
+    "geribildirim": "Çevik liderlik, sürekli öğrenme ve geri bildirim alma prensibi üzerine kuruludur."
+  },
+  {
+    "id": 105,
+    "konu_id": "cevik-liderlik",
+    "zorluk": "orta",
+    "kategori": "planlama",
+    "soru": "Okulda aniden su kesintisi yaşanır. Okul müdürü, kriz planı dışında hızlı bir çözümle dersleri dijital ortama kaydırır. Bu esneklik aşağıdaki hangi liderlik özelliğine örnektir?",
+    "secenekler": [
+      "Plan dışı yönetim hatası",
+      "Kriz karşısında plansızlık",
+      "Çevik liderliğin adaptasyon yetisi",
+      "Sorumsuz karar alma"
+    ],
+    "dogru_cevap": "Çevik liderliğin adaptasyon yetisi",
+    "geribildirim": "Çevik liderler beklenmedik durumlara hızlıca yanıt verebilir, planları koşullara göre değiştirir."
   }
 ]
