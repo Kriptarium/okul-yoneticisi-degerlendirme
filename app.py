@@ -22,6 +22,7 @@ if menu == "Giriş Yap":
             st.success("Giriş başarılı!")
             st.session_state["oturum"] = True
             st.session_state["kullanici"] = kullanici
+            st.experimental_rerun()
         else:
             st.error("Giriş bilgileri hatalı.")
 
@@ -40,16 +41,17 @@ if st.session_state["oturum"]:
     with open("konular.json", "r", encoding="utf-8") as f:
         konular = json.load(f)
 
-    secili_konu_baslik = st.selectbox("📚 Eğitim Konusunu Seçin:", [k["baslik"] for k in konular])
-    konu = next(k for k in konular if k["baslik"] == secili_konu_baslik)
+    st.markdown("## 📚 Eğitim Modülleri")
 
-    st.video(konu["video_url"])
-    st.info(konu["aciklama"])
-
-    if st.button("🎓 Eğitimi Tamamladım, Teste Başla"):
-        st.session_state["konu_id"] = konu["id"]
-        st.session_state["konu_baslik"] = konu["baslik"]
-        st.session_state["teste_basla"] = True
+    for konu in konular:
+        with st.expander(f"🎓 {konu['baslik']}"):
+            st.video(konu["video_url"])
+            st.info(konu["aciklama"])
+            if st.button(f"✅ Bu eğitimi tamamladım – {konu['baslik']}", key=konu["id"]):
+                st.session_state["konu_id"] = konu["id"]
+                st.session_state["konu_baslik"] = konu["baslik"]
+                st.session_state["teste_basla"] = True
+                st.experimental_rerun()
 
     if st.session_state.get("teste_basla", False):
         with open("sorular.json", "r", encoding="utf-8") as f:
