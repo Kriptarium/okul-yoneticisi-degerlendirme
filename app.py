@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 import os
 
-# JSON dosyalarını yükle
+# Soru havuzu yükleniyor
 with open("sorular.json", "r", encoding="utf-8") as f:
     sorular = json.load(f)
 
@@ -58,10 +58,12 @@ if kullanici_adi:
                 st.markdown(f"❌ Yanlış - Doğru cevap: {soru['dogru_cevap']}")
             st.markdown(f"**Geri Bildirim:** {soru['geribildirim']}")
 
-        # Puan geçmişi gösterimi
-        with open(PUANLAR_DOSYASI, "r", encoding="utf-8") as f:
-            puanlar = json.load(f)
-        st.markdown("---")
-        st.subheader("📈 Geçmiş Puanlarınız")
-        for kayit in puanlar[kullanici_adi][-5:]:
-            st.write(f"{kayit['tarih']}: {kayit['puan']} / {kayit['toplam']}")
+        # Geçmiş puanlar
+        if os.path.exists(PUANLAR_DOSYASI):
+            with open(PUANLAR_DOSYASI, "r", encoding="utf-8") as f:
+                puanlar = json.load(f)
+            if kullanici_adi in puanlar:
+                st.markdown("---")
+                st.subheader("📈 Geçmiş Puanlarınız")
+                for kayit in puanlar[kullanici_adi][-5:]:
+                    st.write(f"{kayit['tarih']}: {kayit['puan']} / {kayit['toplam']}")
